@@ -172,102 +172,129 @@ const WATCHLIST = {
   repo: "",
   tickers: [
     { symbol: "NVDA", name: "NVIDIA", exchange: "NASDAQ", why: "The AI capex cycle in one ticker. If this moves, the whole list moves." },
-    { symbol: "JPM",  name: "JPMorgan Chase", exchange: "NYSE", why: "The bank every banking recruit should be able to talk about for five minutes." },
+    { symbol: "PEP",  name: "PepsiCo", exchange: "NASDAQ", why: "Snacks and drinks in one company. Pricing power and volumes show how the consumer is holding up." },
     { symbol: "ACN",  name: "Accenture", exchange: "NYSE", why: "The consulting bellwether. Its bookings tell you how clients feel about spending." },
-    { symbol: "DE",   name: "Deere", exchange: "NYSE", why: "Midwest industrial. Farm income, tariffs, and rates all show up here." },
+    { symbol: "KO",   name: "Coca-Cola", exchange: "NYSE", why: "The consumer staples benchmark. A steady dividend payer that shows how global demand and currencies are playing out." },
     { symbol: "LLY",  name: "Eli Lilly", exchange: "NYSE", why: "Indiana's largest company and the GLP-1 story." }
   ]
 };
 
 const BRIEF = {
-  mode: "sample",
-  asOf: "2026-10-16",
-  retrievedAt: "2026-10-16T16:30:00-04:00",
+  mode: "live",
+  asOf: "2026-10-28",
+  retrievedAt: "2026-10-28T17:15:00-04:00",
   priceType: "close",
   companies: {
     NVDA: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 101.40 },
-        { date: "2026-10-14", close: 99.80 },
-        { date: "2026-10-15", close: 103.10 },
-        { date: "2026-10-16", close: 104.20 }
+        { date: "2026-10-22", close: 212.21 },
+        { date: "2026-10-23", close: 210.96 },
+        { date: "2026-10-26", close: 216.00 },
+        { date: "2026-10-27", close: 217.94 },
+        { date: "2026-10-28", close: 215.38 }
       ],
       latest: null,
-      priceSource: "https://example.com/sample",
+      priceSource: "https://stockanalysis.com/stocks/nvda/history/",
       news: [
-        { date: "2026-10-15", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample. The agent writes one plain sentence here on why the item matters to the stock." }
+        { date: "2026-10-28", headline: "DOJ reviewing Nvidia's acquisition of Hugging Face, Reuters reports", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/doj-reviewing-nvidias-acquisition-of-hugging-face-reuters-reports-thefly-news", why: "The Justice Department is asking how Nvidia's $12.93B Hugging Face purchase could affect AI competition, on top of its existing multi-year investigation." },
+        { date: "2026-10-27", headline: "Nvidia to invest $3B in Meta's planned equity offering", source: "StockAnalysis", url: "https://stockanalysis.com/news/nvidia-3-billion-meta-offering/", why: "Nvidia is putting money into a big customer's stock sale, and the two companies will expand their work together on Meta's AI models and Nvidia infrastructure." },
+        { date: "2026-10-28", headline: "Voice AI in vogue: Nvidia releases new open transcription model", source: "TechCrunch", url: "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/", why: "A free speech-to-text model; a product update that adds to Nvidia's software ecosystem but is unlikely to move earnings." }
       ],
       upcoming: [
-        { date: "2026-10-28", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
+        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. NVDA earnings (expected Nov 17 per StockAnalysis) fall outside the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
       ]
     },
-    JPM: {
+    PEP: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 99.30 },
-        { date: "2026-10-14", close: 98.90 },
-        { date: "2026-10-15", close: 98.20 },
-        { date: "2026-10-16", close: 97.60 }
+        { date: "2026-10-22", close: 138.83 },
+        { date: "2026-10-23", close: 135.77 },
+        { date: "2026-10-26", close: 135.46 },
+        { date: "2026-10-27", close: 133.50 },
+        { date: "2026-10-28", close: 132.63 }
       ],
       latest: null,
-      priceSource: "https://example.com/sample",
+      priceSource: "https://stockanalysis.com/stocks/pep/history/",
       news: [
-        { date: "2026-10-14", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample." }
+        { date: "2026-10-22", headline: "Taco Bell and PepsiCo Commit to 11 More Years Together, Keeping the Iconic Mountain Dew Baja Blast Flowing and Beverage Innovation Moving Forward", source: "PR Newswire", url: "https://www.prnewswire.com/news-releases/taco-bell-and-pepsico-commit-to-11-more-years-together-keeping-the-iconic-mountain-dew-baja-blast-flowing-and-beverage-innovation-moving-forward-302917054.html", why: "PepsiCo keeps a major restaurant customer for 11 more years in the U.S. and several other countries." },
+        { date: "2026-10-22", headline: "PepsiCo Stock (PEP) Rallies as Its Beverage Deal with Taco Bell Is Extended", source: "TipRanks", url: "https://www.tipranks.com/news/pepsico-stock-pep-rallies-on-news-its-beverage-deal-with-taco-bell-has-been-extended", why: "Shares rose about 3% that day, after KFC's switch to Coca-Cola a week earlier had pushed the stock to a 52-week low." }
       ],
-      upcoming: []
+      upcoming: [
+        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. No PepsiCo-specific event found in the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
+      ]
     },
     ACN: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 100.20 },
-        { date: "2026-10-14", close: 99.90 },
-        { date: "2026-10-15", close: 100.10 },
-        { date: "2026-10-16", close: 100.05 }
+        { date: "2026-10-22", close: 258.74 },
+        { date: "2026-10-23", close: 249.37 },
+        { date: "2026-10-26", close: 247.23 },
+        { date: "2026-10-27", close: 235.16 },
+        { date: "2026-10-28", close: 243.40 }
       ],
       latest: null,
-      priceSource: "https://example.com/sample",
-      news: [],
+      priceSource: "https://stockanalysis.com/stocks/acn/history/",
+      news: [
+        { date: "2026-10-27", headline: "Accenture awarded $151.46M Air Force task order", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-awarded-151-46m-air-force-task-order-thefly-news", why: "A no-competition federal contract for work on the missile-system FENCES platform, adding to Accenture's government business." },
+        { date: "2026-10-26", headline: "Accenture price target raised to $252 from $210 at Wells Fargo", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-price-target-raised-to-252-from-210-at-wells-fargo-thefly-news", why: "Wells Fargo stays at Equal Weight: it expects AI to help eventually but sees growth gains taking time." },
+        { date: "2026-10-21", headline: "Accenture downgraded to Neutral from Outperform at Baird", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-downgraded-to-neutral-from-outperform-at-baird-thefly-news", why: "Baird says the shares have roughly doubled since June and now look fairly valued, though it raised its price target to $252." }
+      ],
       upcoming: [
-        { date: "2026-10-22", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
+        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. No Accenture-specific event found in the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
       ]
     },
-    DE: {
+    KO: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 102.50 },
-        { date: "2026-10-14", close: 101.80 },
-        { date: "2026-10-15", close: 103.90 },
-        { date: "2026-10-16", close: 102.70 }
+        { date: "2026-10-22", close: 95.34 },
+        { date: "2026-10-23", close: 92.71 },
+        { date: "2026-10-26", close: 92.70 },
+        { date: "2026-10-27", close: 91.18 },
+        { date: "2026-10-28", close: 91.73 }
       ],
       latest: null,
-      priceSource: "https://example.com/sample",
+      priceSource: "https://stockanalysis.com/stocks/ko/history/",
       news: [
-        { date: "2026-10-13", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample." }
+        { date: "2026-10-27", headline: "Coca-Cola Stock (KO) Falls After Beat-and-Raise Print. Here's Why", source: "TipRanks", url: "https://www.tipranks.com/news/coca-cola-stock-ko-falls-after-beat-and-raise-print-heres-why", why: "Q3 earnings beat and the 2026 outlook was raised, but the stock slipped about 1% because U.S. and Canadian sales stay weak." },
+        { date: "2026-10-28", headline: "Coca-Cola price target raised to $100 from $90 at Wells Fargo", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/coca-cola-price-target-raised-to-100-from-90-at-wells-fargo-thefly-news", why: "Wells Fargo stays positive but asks whether this year's strong run makes it harder to beat expectations next year." }
       ],
-      upcoming: []
+      upcoming: [
+        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. No Coca-Cola-specific event found in the window (Q3 earnings were Oct 27).", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
+      ]
     },
     LLY: {
       closes: [
-        { date: "2026-10-12", close: 100.00 },
-        { date: "2026-10-13", close: 98.70 },
-        { date: "2026-10-14", close: 99.60 },
-        { date: "2026-10-15", close: 101.30 },
-        { date: "2026-10-16", close: 102.90 }
+        { date: "2026-10-22", close: 1306.69 },
+        { date: "2026-10-23", close: 1273.46 },
+        { date: "2026-10-26", close: 1279.14 },
+        { date: "2026-10-27", close: 1281.91 },
+        { date: "2026-10-28", close: 1288.30 }
       ],
       latest: null,
-      priceSource: "https://example.com/sample",
+      priceSource: "https://stockanalysis.com/stocks/lly/history/",
       news: [
-        { date: "2026-10-16", headline: "Sample headline. Run the refresh-brief agent to replace this.", source: "Sample", url: "https://example.com/sample", why: "Sample." }
+        { date: "2026-10-28", headline: "Lilly's Retatrutide Outperforms Ozempic on Blood Sugar and Weight Loss in Head-to-Head Trial", source: "PR Newswire (Eli Lilly)", url: "https://www.prnewswire.com/news-releases/lillys-retatrutide-delivered-greater-a1c-reduction-and-more-than-double-the-weight-loss-of-ozempics-highest-approved-dose-in-head-to-head-trial-302921328.html", why: "Phase 3 topline data: retatrutide cut A1C more than Ozempic 2 mg and roughly doubled the weight loss; it is not yet approved by any regulator." },
+        { date: "2026-10-27", headline: "Patrik Jonsson to retire after 36 years; Ilya Yuffa named president, Lilly Global Markets", source: "PR Newswire (Eli Lilly)", url: "https://www.prnewswire.com/news-releases/patrik-jonsson-to-retire-after-36-years-ilya-yuffa-named-president-lilly-global-markets-302921191.html", why: "A leadership change that merges Lilly's U.S. and international businesses starting January 1, 2027." }
       ],
       upcoming: [
-        { date: "2026-10-30", event: "Sample event (replace by refreshing)", source: "Sample", url: "https://example.com/sample" }
+        { date: "2026-10-29", event: "Q3 2026 earnings release and conference call (10:00 AM ET)", source: "Lilly press release via Finviz (Oct 15)", url: "https://finviz.com/news/403165/lilly-confirms-date-and-conference-call-for-third-quarter-2026-financial-results-announcement" },
+        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
       ]
     }
   }
 };
 
 const CHANGELOG = [
+  {
+    date: "2026-10-28",
+    summary: [
+      "NVDA 221.97 to 217.58 (-2.0%) on Nvidia's planned $3B investment in Meta's equity offering (Oct 21 close to Oct 28 intraday)",
+      "JPM 335.19 to 337.12 (+0.6%), no major news (only a tokenized money market fund expansion)",
+      "ACN 240.26 to 246.51 (+2.6%) on a Baird downgrade to Neutral and a $151M Air Force task order; note the stock closed at 235.16 on Oct 27, so the move is volatile",
+      "DE 636.54 to 642.05 (+0.9%), no major news (no articles dated within the last 7 days found)",
+      "LLY 1270.75 to 1290.75 (+1.6%) on retatrutide head-to-head data versus Ozempic",
+      "Calendar added: FOMC decision Oct 28 (all tickers) and LLY Q3 earnings Oct 29. No other scheduled events found inside the next 14 days: NVDA, ACN (expected Dec 17) and DE (Nov 25) earnings fall outside the window.",
+      "Missing: JPM has one news item only and DE has none. Several articles (CNBC, Reuters, Barron's, Business Wire, GlobeNewswire, Invezz) could not be opened, so they were not used."
+    ],
+    note: "Verify first: (1) Markets were open, so each ticker has an intraday price; the Oct 28 row on stockanalysis.com is not a final close. The page timestamp was 10:15 AM EDT (NVDA) and 10:16 AM EDT (DE); I assumed 10:15 for JPM, ACN and LLY and did not check their individual timestamps. (2) FOMC date comes from the Fed calendar (meeting Oct 27-28); I did not open the decision statement. (3) LLY earnings date was confirmed through a Finviz copy of Lilly's Oct 15 release because Lilly's IR site returned 403. DE is still in WATCHLIST pending your decision. NVDA's next earnings date was not announced yet (trackers suggest mid-November)."
+  },
   {
     date: "2026-10-16",
     summary: [
