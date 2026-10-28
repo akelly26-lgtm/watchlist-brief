@@ -103,6 +103,7 @@ section { margin-bottom: 2rem; }
 
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding: 1rem 0 2rem; }
 footer p { margin: .2rem 0; }
+.tape .sym a, .items .h a, .cal .src a, .items a.src, footer a { display: inline-flex; align-items: center; min-height: 44px; }
 
 @media (max-width: 420px) {
   .tape li { grid-template-columns: minmax(0,1fr) 92px 84px; }
@@ -201,7 +202,7 @@ const BRIEF = {
         { date: "2026-10-28", headline: "Voice AI in vogue: Nvidia releases new open transcription model", source: "TechCrunch", url: "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/", why: "A free speech-to-text model; a product update that adds to Nvidia's software ecosystem but is unlikely to move earnings." }
       ],
       upcoming: [
-        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. NVDA earnings (expected Nov 17 per StockAnalysis) fall outside the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
+        { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. NVIDIA has not yet announced its Q3 FY2027 earnings date (unofficial trackers estimate mid-to-late November), so no NVDA earnings date falls in the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
       ]
     },
     PEP: {
@@ -215,8 +216,8 @@ const BRIEF = {
       latest: null,
       priceSource: "https://stockanalysis.com/stocks/pep/history/",
       news: [
-        { date: "2026-10-22", headline: "Taco Bell and PepsiCo Commit to 11 More Years Together, Keeping the Iconic Mountain Dew Baja Blast Flowing and Beverage Innovation Moving Forward", source: "PR Newswire", url: "https://www.prnewswire.com/news-releases/taco-bell-and-pepsico-commit-to-11-more-years-together-keeping-the-iconic-mountain-dew-baja-blast-flowing-and-beverage-innovation-moving-forward-302917054.html", why: "PepsiCo keeps a major restaurant customer for 11 more years in the U.S. and several other countries." },
-        { date: "2026-10-22", headline: "PepsiCo Stock (PEP) Rallies as Its Beverage Deal with Taco Bell Is Extended", source: "TipRanks", url: "https://www.tipranks.com/news/pepsico-stock-pep-rallies-on-news-its-beverage-deal-with-taco-bell-has-been-extended", why: "Shares rose about 3% that day, after KFC's switch to Coca-Cola a week earlier had pushed the stock to a 52-week low." }
+        { date: "2026-10-22", headline: "Taco Bell and PepsiCo Commit to 11 More Years Together, Keeping the Iconic Mountain Dew Baja Blast Flowing and Beverage Innovation Moving Forward", source: "PR Newswire", url: "https://www.prnewswire.com/news-releases/taco-bell-and-pepsico-commit-to-11-more-years-together-keeping-the-iconic-mountain-dew-baja-blast-flowing-and-beverage-innovation-moving-forward-302917054.html", why: "PepsiCo keeps a major restaurant customer for 11 more years in the U.S.; it also stays Taco Bell's drinks partner in Canada, the UK, Ireland and Thailand, with no term given for those." },
+        { date: "2026-10-22", headline: "PepsiCo Stock (PEP) Rallies as Its Beverage Deal with Taco Bell Is Extended", source: "TipRanks", url: "https://www.tipranks.com/news/pepsico-stock-pep-rallies-on-news-its-beverage-deal-with-taco-bell-has-been-extended", why: "Shares rose about 3% that day, after KFC's switch to Coca-Cola had pushed the stock to a 52-week low." }
       ],
       upcoming: [
         { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. No PepsiCo-specific event found in the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
@@ -235,7 +236,7 @@ const BRIEF = {
       news: [
         { date: "2026-10-27", headline: "Accenture awarded $151.46M Air Force task order", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-awarded-151-46m-air-force-task-order-thefly-news", why: "A no-competition federal contract for work on the missile-system FENCES platform, adding to Accenture's government business." },
         { date: "2026-10-26", headline: "Accenture price target raised to $252 from $210 at Wells Fargo", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-price-target-raised-to-252-from-210-at-wells-fargo-thefly-news", why: "Wells Fargo stays at Equal Weight: it expects AI to help eventually but sees growth gains taking time." },
-        { date: "2026-10-21", headline: "Accenture downgraded to Neutral from Outperform at Baird", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-downgraded-to-neutral-from-outperform-at-baird-thefly-news", why: "Baird says the shares have roughly doubled since June and now look fairly valued, though it raised its price target to $252." }
+        { date: "2026-10-21", headline: "Accenture downgraded to Neutral from Outperform at Baird", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/accenture-downgraded-to-neutral-from-outperform-at-baird-thefly-news", why: "Baird says the shares have more than doubled since June and now look fairly valued, though it raised its price target to $252." }
       ],
       upcoming: [
         { date: "2026-11-10", event: "October 2026 CPI release, 8:30 AM ET. Market-wide item. No Accenture-specific event found in the window.", source: "BLS", url: "https://www.bls.gov/schedule/news_release/cpi.htm" }
@@ -252,7 +253,7 @@ const BRIEF = {
       latest: null,
       priceSource: "https://stockanalysis.com/stocks/ko/history/",
       news: [
-        { date: "2026-10-27", headline: "Coca-Cola Stock (KO) Falls After Beat-and-Raise Print. Here's Why", source: "TipRanks", url: "https://www.tipranks.com/news/coca-cola-stock-ko-falls-after-beat-and-raise-print-heres-why", why: "Q3 earnings beat and the 2026 outlook was raised, but the stock slipped about 1% because U.S. and Canadian sales stay weak." },
+        { date: "2026-10-27", headline: "Coca-Cola Stock (KO) Falls After Beat-and-Raise Print. Here's Why", source: "TipRanks", url: "https://www.tipranks.com/news/coca-cola-stock-ko-falls-after-beat-and-raise-print-heres-why", why: "Q3 earnings beat and the 2026 outlook was raised, but the stock fell because U.S. and Canadian sales stay weak, though Latin America, India, China and Brazil were strong." },
         { date: "2026-10-28", headline: "Coca-Cola price target raised to $100 from $90 at Wells Fargo", source: "TheFly (TipRanks)", url: "https://www.tipranks.com/news/the-fly/coca-cola-price-target-raised-to-100-from-90-at-wells-fargo-thefly-news", why: "Wells Fargo stays positive but asks whether this year's strong run makes it harder to beat expectations next year." }
       ],
       upcoming: [
@@ -282,6 +283,34 @@ const BRIEF = {
 };
 
 const CHANGELOG = [
+  {
+    date: "2026-10-28",
+    summary: [
+      "Re-verification pass of the Oct 28 close data. All 25 closes (NVDA, PEP, ACN, KO, LLY, Oct 22 to Oct 28) were re-checked on stockanalysis.com and match; no price changed.",
+      "PEP news 1 (Taco Bell): fixed the why line. The 11-year renewal is the U.S. only; PepsiCo also stays Taco Bell's partner in Canada, the UK, Ireland and Thailand with no term stated.",
+      "PEP news 2: removed 'a week earlier' about the KFC switch, which the article does not state.",
+      "KO news 1: removed 'about 1%' (the article says as much as about 1% intraday; the close fell 1.6% from Oct 26 to Oct 27) and added the regions that were strong.",
+      "ACN news 3 (Baird): 'roughly doubled' changed to 'more than doubled' to match the article.",
+      "NVDA calendar: removed 'expected Nov 17 per StockAnalysis'. NVIDIA's investor pages show no Q3 FY2027 date yet; unofficial trackers estimate Nov 17, 18 or 25. Still outside the 14-day window.",
+      "LLY Oct 29 earnings: still sourced from the Finviz copy of Lilly's Oct 15 release (10:00 AM ET call). Lilly's own investor site returned 403 and the PR Newswire original could not be opened, so it is not confirmed on Lilly's site.",
+      "All other news items and the Nov 10 CPI date (BLS) were reopened and match. retrievedAt was not changed."
+    ],
+    note: "Verify first: (1) LLY Oct 29 date is confirmed only through Finviz, not Lilly's own site. (2) NVDA earnings date is unannounced as of this pass. (3) retrievedAt (5:15 PM EDT) is unchanged from the earlier pass; I did not see a clock during this pass."
+  },
+  {
+    date: "2026-10-28",
+    summary: [
+      "Ticker swap: PEP and KO added; JPM and DE removed from the brief to match WATCHLIST. Earlier 10-28 intraday numbers were replaced by Oct 28 closes (priceType is now close).",
+      "NVDA 212.21 to 215.38 (+1.5%) on DOJ scrutiny of the Hugging Face deal and the $3B Meta investment (Oct 22 close to Oct 28 close)",
+      "PEP 138.83 to 132.63 (-4.5%) on the Taco Bell 11-year renewal (the stock rose on Oct 22 but fell on each later day)",
+      "ACN 258.74 to 243.40 (-5.9%) on a Baird downgrade and a Wells Fargo target raise; the stock closed at 235.16 on Oct 27 and rebounded Oct 28",
+      "KO 95.34 to 91.73 (-3.8%) after a Q3 beat-and-raise that still left the shares lower on weak North America sales",
+      "LLY 1306.69 to 1288.30 (-1.4%) on retatrutide head-to-head data versus Ozempic",
+      "Calendar: LLY Q3 earnings Oct 29 (confirmed) and October CPI Nov 10 (all tickers). The Oct 28 FOMC decision has happened and was removed: it held the range at 3-3/4 to 4 percent, 10-2 vote. No company event found inside 14 days for NVDA (earnings Nov 17), PEP (reported Oct 8), ACN (Dec 17) or KO (reported Oct 27).",
+      "Missing: PEP, KO and LLY have two news items each, not three. CNBC, Barron's and Reuters pages could not be opened, so they were not used (the Barron's story on the Accenture CEO buying $3M of stock was skipped for that reason)."
+    ],
+    note: "Verify first: (1) These are official closes. stockanalysis.com showed 'At close: Oct 28, 2026, 4:00 PM EDT' for all five tickers, plus after-hours quotes stamped 4:55 to 5:13 PM EDT. No intraday price is in the page. After-hours prices were not used. (2) retrievedAt (5:15 PM EDT) is an assumption: I did not see a clock, only the latest page timestamp of about 5:13 PM EDT. (3) The Fed page statement says the range is 3-3/4 to 4 percent with 'keep' wording, but a search snippet showed 3.50 to 3.75 percent in July; I did not reconcile the two, so check the FOMC statement yourself. LLY's earnings date was confirmed through a Finviz copy of Lilly's Oct 15 release. Dates for NVDA (Nov 17) are as shown on StockAnalysis, not confirmed by the company."
+  },
   {
     date: "2026-10-28",
     summary: [
